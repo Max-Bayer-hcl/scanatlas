@@ -1,0 +1,43 @@
+{
+  "Name": "Scanatlas Orthanc",
+
+  "StorageDirectory": "../data/orthanc/storage",
+  "IndexDirectory":   "../data/orthanc/index",
+
+  "HttpServerEnabled": true,
+  "HttpPort": 8042,
+  "DicomServerEnabled": true,
+  "DicomAet": "ORTHANC",
+  "DicomPort": 4242,
+  "RemoteAccessAllowed": true,
+  "AuthenticationEnabled": false,
+  "HttpCompressionEnabled": true,
+
+  "HttpHeaders": {
+    "Access-Control-Allow-Origin":  "*",
+    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+    "Access-Control-Allow-Headers": "Origin, Accept, Content-Type, Authorization, X-Requested-With",
+    "Access-Control-Expose-Headers":"Content-Type, Content-Length"
+  },
+
+  "Plugins": [ "." ],
+
+  "DicomWeb": {
+    "Enable": true,
+    "Root":   "/dicom-web/",
+    "EnableWado": true,
+    "WadoRoot": "/wado",
+    "Ssl": false,
+    "QidoCaseSensitive": false,
+    "StudiesMetadata": "Full",
+    "SeriesMetadata":  "Full"
+  },
+
+  "OrthancExplorer2": {
+    "Enable": true,
+    "IsDefaultOrthancUI": true
+  },
+
+  "LogLevel": "default",
+  "LogFile":  "../data/orthanc/orthanc.log"
+}

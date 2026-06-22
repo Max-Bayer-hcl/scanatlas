@@ -1,0 +1,18 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.python-version
+
+# Node / Vite
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Project data
+data/
+.DS_Store
+
+# Orthanc binary bundle (downloaded by setup, not source-controlled)
+vendor/
